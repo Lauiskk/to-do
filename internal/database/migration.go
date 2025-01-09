@@ -1,12 +1,15 @@
 package database
 
 import (
+	"ProjectsGo/internal/entities/domain"
 	"github.com/gofiber/fiber/v2"
 )
 
 func Migrate(c *fiber.Ctx) error {
 
-	err := GetDB(c).AutoMigrate()
+	err := GetDB(c).AutoMigrate(
+		&domain.ToDo{},
+	)
 
 	if err != nil {
 		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{"Error migrating schemas": err.Error()})
