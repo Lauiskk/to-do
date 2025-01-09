@@ -45,8 +45,8 @@ func NewConnection() error {
 	//
 	//if clientCert != "" {
 	//	dsn += fmt.Sprintf(" sslcert=%s", clientCert)
-	//}   /////777
-	// TODO: Descomentar para subir em prod
+	//}
+	//
 
 	log.Printf("Connecting to database: %s:%s\n", host, port)
 	DB, err := gorm.Open(postgres.Open(dsn), &gorm.Config{
