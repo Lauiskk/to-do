@@ -18,9 +18,11 @@ type ToDo struct {
 }
 
 type ToDoUpdateRequest struct {
+	//TODO create UPDATE
 }
 
 type ToDoFindFilter struct {
+	//TODO create FIND
 }
 
 func (t *ToDoFindFilter) ApplyToDoFilter(db *gorm.DB) (*gorm.DB, []response.ValidationError) {

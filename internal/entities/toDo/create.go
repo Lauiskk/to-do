@@ -26,6 +26,10 @@ func Create(c *fiber.Ctx) error {
 		errList = append(errList, *fieldsErrors...)
 	}
 
+	if toDoObject.Deadline != nil {
+		//TODO validar data de fim
+	}
+
 	if len(errList) > 0 {
 		return response.NewCustomError(response.ErrMsgBadRequest, response.ErrBadRequest, fiber.StatusBadRequest, &errList, nil, nil)
 	}
