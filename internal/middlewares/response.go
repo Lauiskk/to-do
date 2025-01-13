@@ -11,6 +11,7 @@ import (
 	"strings"
 )
 
+// TODO melhorar response handler
 func ResponseHandler(c *fiber.Ctx) error {
 	err := c.Next()
 	statusCode := c.Response().StatusCode()

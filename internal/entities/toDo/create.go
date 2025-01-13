@@ -27,7 +27,7 @@ func Create(c *fiber.Ctx) error {
 	}
 
 	if toDoObject.Deadline != nil {
-		//TODO validar data de fim
+		//TODO validar data
 	}
 
 	if len(errList) > 0 {
