@@ -22,11 +22,6 @@ func init() {
 		}
 	}
 
-	//TODO remover
-	//if os.Getenv("JPMC_LOGS_URL") == "" || os.Getenv("JPMC_API_LOGS_INDEX_PREFIX") == "" || os.Getenv("JPMC_TIMEZONE") == "" {
-	//	log.Fatal("missing JPMC_LOGS_URL, JPMC_API_LOGS_INDEX_PREFIX, JPMC_TIMEZONE .ENV variables")
-	//}
-
 	time.Local, _ = time.LoadLocation(os.Getenv("TIMEZONE_PROJECT")) //TODO ADICIONAR ENV
 }
 
